@@ -1,3 +1,4 @@
 {
-  "mongoURL": "mongodb+srv://susume:Tanthanh1@learning-node-59hfn.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURL": "mongodb+srv://susume:Tanthanh1@learning-node-59hfn.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSerect": "myserecttoken"
 }
