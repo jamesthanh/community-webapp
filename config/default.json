@@ -1,4 +1,6 @@
 {
   "mongoURL": "mongodb+srv://susume:Tanthanh1@learning-node-59hfn.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSerect": "myserecttoken"
+  "jwtSerect": "myserecttoken",
+  "githubclientId": "Iv1.213df29655248c59",
+  "githubSerect": "47f947baa48fcf2b61d8f8fe502f851f6065b7e2"
 }

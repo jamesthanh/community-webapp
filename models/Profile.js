@@ -66,6 +66,9 @@ const ProfileSchema = new mongoose.Schema({
         type: String,
         require: true,
       },
+      location: {
+        type: String,
+      },
       from: {
         type: Date,
         required: true,
