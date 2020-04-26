@@ -3,6 +3,7 @@ const request = require('request');
 const config = require('config');
 const router = express.Router();
 const auth = require('../../middleware/auth');
+const mongoose = require('mongoose');
 const { check, validationResult } = require('express-validator');
 
 const Profile = require('../../models/Profile');
@@ -133,7 +134,7 @@ router.get('/user/:user_id', async (req, res) => {
     res.json(profile);
   } catch (err) {
     console.error(err.message);
-    if (err.kind == 'ObjectId') {
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
       return res.status(400).json({ msg: 'Profile not found' });
     }
     res.status(500).send('Server Error');
