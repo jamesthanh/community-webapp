@@ -37,6 +37,7 @@ router.post(
     auth,
     [
       check('status', 'Status is required').not().isEmpty(),
+      check('sid', 'Your RMIT ID is required').not().isEmpty(),
       check('major', 'Major is required').not().isEmpty(),
       check('skills', 'Skills are required').not().isEmpty(),
     ],
@@ -50,6 +51,7 @@ router.post(
     }
     const {
       bio,
+      sid,
       major,
       skills,
       status,
@@ -66,6 +68,7 @@ router.post(
     const profileFileds = {};
     profileFileds.user = req.user.id;
     if (bio) profileFileds.bio = bio;
+    if (sid) profileFileds.sid = sid;
     if (major) profileFileds.major = major;
     if (status) profileFileds.status = status;
     if (location) profileFileds.location = location;

@@ -9,6 +9,10 @@ const ProfileSchema = new mongoose.Schema({
   bio: {
     type: String,
   },
+  sid: {
+    type: String,
+    required: true,
+  },
   major: {
     type: String,
     required: true,
@@ -24,6 +28,7 @@ const ProfileSchema = new mongoose.Schema({
   location: {
     type: String,
   },
+
   githubusername: {
     type: String,
   },
