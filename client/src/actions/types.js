@@ -13,7 +13,10 @@ export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const LOGOUT = 'LOGOUT';
 
 export const GET_PROFILE = 'GET_PROFILE';
+<<<<<<< HEAD
 export const UPDATE_PROFILE = 'UPDATE_PROFILE';
 
+=======
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
 export const CLEAR_PROFILE = 'CLEAR_PROFILE';
 export const PROFILE_ERROR = 'PROFILE_ERROR';

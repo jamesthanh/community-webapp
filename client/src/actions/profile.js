@@ -1,7 +1,11 @@
 import axios from 'axios';
 import { setAlert } from './alert';
 
+<<<<<<< HEAD
 import { GET_PROFILE, PROFILE_ERROR, UPDATE_PROFILE } from './types';
+=======
+import { GET_PROFILE, PROFILE_ERROR } from './types';
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
 
 // get current user profile
 export const getCurrentProfile = () => async (dispatch) => {
@@ -51,6 +55,7 @@ export const createProfile = (formData, history, edit = false) => async (
     });
   }
 };
+<<<<<<< HEAD
 
 // Add Experience
 export const addExperience = (formData, history) => async (dispatch) => {
@@ -117,3 +122,5 @@ export const addEducation = (formData, history) => async (dispatch) => {
     });
   }
 };
+=======
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95

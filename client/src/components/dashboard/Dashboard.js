@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import DashboardActions from './DashboardActions';
+<<<<<<< HEAD
 import Experience from './Experience';
 import Education from './Education';
+=======
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
 import { getCurrentProfile } from '../../actions/profile';
 
 const Dashboard = ({
@@ -15,7 +18,10 @@ const Dashboard = ({
 }) => {
   useEffect(() => {
     getCurrentProfile();
+<<<<<<< HEAD
     // eslint-disable-next-line react-hooks/exhaustive-deps
+=======
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
   }, []);
   return loading && profile === null ? (
     <Spinner />
@@ -28,8 +34,11 @@ const Dashboard = ({
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
+<<<<<<< HEAD
           <Experience experience={profile.experience} />
           <Education education={profile.education} />
+=======
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
         </Fragment>
       ) : (
         <Fragment>

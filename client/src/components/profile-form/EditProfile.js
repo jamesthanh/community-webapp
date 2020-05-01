@@ -44,7 +44,10 @@ const EditProfile = ({
       instagram: loading || !profile.social ? '' : profile.social.instagram,
       linkedin: loading || !profile.social ? '' : profile.social.linkedin,
     });
+<<<<<<< HEAD
     // eslint-disable-next-line react-hooks/exhaustive-deps
+=======
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
   }, [loading]);
 
   const {
@@ -71,7 +74,11 @@ const EditProfile = ({
 
   return (
     <Fragment>
+<<<<<<< HEAD
       <h1 className='large'>Create Your Profile</h1>
+=======
+      <h1 class='large'>Create Your Profile</h1>
+>>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
       <p className='lead'>
         <i className='fas fa-user'></i> Let's get some information to make your
         profile stand out
