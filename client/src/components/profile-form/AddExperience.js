@@ -40,6 +40,7 @@ const AddExperience = ({ addExperience, history }) => {
             name='title'
             value={title}
             onChange={(e) => onChange(e)}
+            required
           />
         </div>
 
@@ -50,6 +51,7 @@ const AddExperience = ({ addExperience, history }) => {
             name='company'
             value={company}
             onChange={(e) => onChange(e)}
+            required
           />
         </div>
         <div className='form-group'>
@@ -105,7 +107,7 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={(e) => onChange(e)}
           ></textarea>
         </div>
-        <input type='submit' className='btn btn-primary my-1' />
+        <input type='submit' className='btn btn-danger my-1' />
         <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
         </Link>

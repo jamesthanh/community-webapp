@@ -8,11 +8,10 @@ import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/profile-form/CreateProfile';
 import EditProfile from './components/profile-form/EditProfile';
-<<<<<<< HEAD
+
 import AddExperience from './components/profile-form/AddExperience';
 import AddEducation from './components/profile-form/AddEducation';
-=======
->>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
+
 import PrivateRoute from './components/routing/PrivateRoute';
 
 // Redux
@@ -53,7 +52,7 @@ const App = () => {
                 path='/edit-profile'
                 component={EditProfile}
               />
-<<<<<<< HEAD
+
               <PrivateRoute
                 exact
                 path='/add-experience'
@@ -64,8 +63,6 @@ const App = () => {
                 path='/add-education'
                 component={AddEducation}
               />
-=======
->>>>>>> 8b8e67a29324ea923f984e71316dead9411b9f95
             </Switch>
           </section>
         </Fragment>

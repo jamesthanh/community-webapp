@@ -40,6 +40,7 @@ const AddEducation = ({ addEducation, history }) => {
             name='school'
             value={school}
             onChange={(e) => onChange(e)}
+            required
           />
         </div>
 
@@ -50,6 +51,7 @@ const AddEducation = ({ addEducation, history }) => {
             name='status'
             value={status}
             onChange={(e) => onChange(e)}
+            required
           />
         </div>
         <div className='form-group'>
@@ -82,7 +84,7 @@ const AddEducation = ({ addEducation, history }) => {
                 toggleDisabled(!toDataDisabled);
               }}
             />{' '}
-            Current Undergoing Experience
+            Current Education?
           </p>
         </div>
         <div className='form-group'>
@@ -105,7 +107,7 @@ const AddEducation = ({ addEducation, history }) => {
             onChange={(e) => onChange(e)}
           ></textarea>
         </div>
-        <input type='submit' className='btn btn-primary my-1' />
+        <input type='submit' className='btn btn-danger my-1' />
         <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
         </Link>
