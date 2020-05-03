@@ -3,7 +3,7 @@
   --primary-color: #17a2b8;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
-  --danger-color: #dc3545;
+  --danger-color: #c70039;
   --success-color: #28a745;
 }
 
@@ -55,7 +55,6 @@ img {
   font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: #c70039;
 }
 
 .lead {
@@ -164,7 +163,7 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--primary-color);
+  background: var(--danger-color);
   color: #fff;
 }
 
