@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
-// import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
@@ -10,37 +9,21 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: '',
+    passowrd: '',
     password2: '',
   });
 
   const { name, email, password, password2 } = formData;
+
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
     } else {
       register({ name, email, password });
-      //   const newUser = {
-      //     name,
-      //     email,
-      //     password,
-      //   };
-      //   try {
-      //     const config = {
-      //       headers: {
-      //         'Content-Type': 'application/json',
-      //       },
-      //     };
-      //     const body = JSON.stringify(newUser);
-      //     const res = await axios.post('/api/users', body, config);
-      //     console.log(res.data);
-      //   } catch (err) {
-      //     console.error(err.response.data);
-      //   }
     }
   };
 
@@ -62,7 +45,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             name='name'
             value={name}
             onChange={(e) => onChange(e)}
-            //required
+            // required
           />
         </div>
         <div className='form-group'>
@@ -73,11 +56,11 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             name='email'
             value={email}
             onChange={(e) => onChange(e)}
-            //required
+            // required
           />
           <small className='form-text'>
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
+            The site will get your current avatar email and display it as your
+            profile
           </small>
         </div>
         <div className='form-group'>
@@ -85,9 +68,9 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             type='password'
             placeholder='Password'
             name='password'
+            // minLength='6'
             value={password}
             onChange={(e) => onChange(e)}
-            // minLength='6'
           />
           <small className='form-text'>
             Your password must be at least 6 characters
@@ -98,19 +81,20 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             type='password'
             placeholder='Confirm Password'
             name='password2'
+            // minLength='6'
             value={password2}
             onChange={(e) => onChange(e)}
-            //minLength='6'
           />
         </div>
         <input type='submit' className='btn btn-danger' value='Register' />
       </form>
       <p className='my-1'>
-        Already have an account? <Link to='/login'>Login</Link>
+        Already have an account? <Link to='/login'>Sign In</Link>
       </p>
     </Fragment>
   );
 };
+
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
@@ -120,4 +104,5 @@ Register.propTypes = {
 const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
 });
+
 export default connect(mapStateToProps, { setAlert, register })(Register);

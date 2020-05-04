@@ -1,21 +1,20 @@
 import React, { Fragment, useState } from 'react';
-// import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth';
-
 export const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: '',
-    password: '',
+    passowrd: '',
   });
 
   const { email, password } = formData;
+
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     login(email, password);
   };
@@ -29,7 +28,7 @@ export const Login = ({ login, isAuthenticated }) => {
     <Fragment>
       <h1 className='large .text-danger'>Sign In</h1>
       <p className='lead'>
-        <i className='fas fa-user'></i> Login Into your Account
+        <i className='fas fa-user'></i> Sign in your account
       </p>
       <form className='form' onSubmit={(e) => onSubmit(e)}>
         <div className='form-group'>
@@ -48,13 +47,10 @@ export const Login = ({ login, isAuthenticated }) => {
             type='password'
             placeholder='Password'
             name='password'
+            minLength='6'
             value={password}
             onChange={(e) => onChange(e)}
-            minLength='6'
           />
-          <small className='form-text'>
-            Your password must be at least 6 characters
-          </small>
         </div>
 
         <input type='submit' className='btn btn-danger' value='Login' />

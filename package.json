@@ -20,7 +20,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.10",
     "react-uuid": "^1.0.2",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "uuid": "^8.0.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
